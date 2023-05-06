@@ -87,6 +87,10 @@ workspace "Solucion EA Funda Arqui 2022-2" {
 
            }
            service3 -> service4 "Uses"
+           
+           database4 = container "MySQL Database" "Stores data from external process " "MySQL" "Database"
+           
+           service3 -> database4 "Reads and writes to"
        }
 
    }
@@ -131,7 +135,7 @@ workspace "Solucion EA Funda Arqui 2022-2" {
               
                shape pipe
                
-               background #FFFF00 
+               background #FFC000 
            }
 
            element "NoSQLDatabase" {
